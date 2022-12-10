@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminMasterPagePlaceholder" Runat="Server">
     <div>
         <h1>Car Types</h1>
-        <asp:GridView ID="TypeTable" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="tId" DataSourceID="carType" ForeColor="#333333" GridLines="None" Width="994px">
+        <asp:GridView ID="TypeTable" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="tId" DataSourceID="carType" ForeColor="#333333" GridLines="None" Width="992px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
