@@ -1,23 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="EditCar.aspx.cs" Inherits="EditCar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminMasterPagePlaceholder" Runat="Server">
-      <div>
-        <h1>Search For The Car By Id to Edit the Car Information</h1>
+    <div>
+        <h1>Complete The Information To Add a New Car</h1>
         <asp:Label runat="server" Text="Label" ID="lblMes"></asp:Label>
         <div style="display:flex;align-items:center">
-            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Car ID </p>  <asp:TextBox ID="wId" runat="server"></asp:TextBox></div>
+            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Car ID </p>  <asp:TextBox ID="cId" runat="server"></asp:TextBox></div>
         </div>
          <div style="display:flex;align-items:center">
-            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Model </p>  <asp:TextBox ID="wModel" runat="server"></asp:TextBox></div>
+            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Model </p>  <asp:TextBox ID="cModel" runat="server"></asp:TextBox></div>
             </div>
         </div>
-       <div style="display:flex;align-items:center">
-            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Type </p>  <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></div>
-            </div>
+        <div style="display:flex;align-items:center">
+            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Type </p> <asp:DropDownList ID="ctype" runat="server"></asp:DropDownList> </div>
         </div>
-             <div style="display:flex;align-items:center">
-            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Company </p>  <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></div>
-            </div>
+        <div style="display:flex;align-items:center">
+            <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Company </p>  <asp:DropDownList ID="cCompany" runat="server"></asp:DropDownList></div>
         </div>
         <div style="display:flex;align-items:center;margin-top:16px">
             <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Description </p>
