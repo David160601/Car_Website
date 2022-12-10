@@ -5,6 +5,7 @@
         <ul>
             <li><a href="AddCar.aspx">Add Car</a></li>
             <li><a href="EditCar.aspx">Edit Car</a></li>
+            <li><a href="EditCarType.aspx">Edit Car Type</a></li>
         </ul>
     </div>
     <div class="adminMasterPageChilds">
