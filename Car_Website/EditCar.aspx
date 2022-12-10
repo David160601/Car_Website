@@ -29,9 +29,9 @@
            <asp:CheckBox runat="server" ID="chkAgree" Text="Checked mean that you have agreed to our terms and policy."  AutoPostBack="True" />
         </div>
         <div style="margin-top:16px">
-             <asp:Button runat="server" ID="btnAddNew" Text="Search" />
-             <asp:Button  ID="btnSubmit" runat="server" Text="Update" />
-             <asp:Button runat="server" Text="Cancel" />
+             <asp:Button runat="server" ID="btnAddNew" Text="Search"  />
+             <asp:Button  ID="btnSubmit" runat="server" Text="Update"/>
+             <asp:Button runat="server" Text="Cancel"/>
         </div>
     </div>
 </asp:Content>
