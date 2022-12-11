@@ -7,6 +7,7 @@
             <li><a href="EditCar.aspx">Edit Car</a></li>
             <li><a href="EditCarType.aspx">Edit Car Type</a></li>
             <li><a href="EditCompany.aspx">Edit Company</a></li>
+                <li><a href="EditImage.aspx">Edit Image</a></li>
         </ul>
     </div>
     <div class="adminMasterPageChilds">
