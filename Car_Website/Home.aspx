@@ -2,7 +2,7 @@
 
 <asp:Content ContentPlaceHolderID="UserMasterPagePlaceholder" Runat="Server">
     <div>
-        <asp:ListView ID="ListView1" runat="server" DataKeyNames="cId" DataSourceID="SqlDataSource1" GroupItemCount="3">
+        <asp:ListView ID="ListView1" runat="server" DataKeyNames="cId" DataSourceID="SqlDataSource1" GroupItemCount="3" OnItemCommand="ListView1_ItemCommand1">
             <EmptyDataTemplate>
                 <table runat="server" style="">
                     <tr>
@@ -21,7 +21,7 @@
 
             <ItemTemplate>
                 <td runat="server" style="">
-                    <asp:Label ID="cIdLabel" Visible="false" runat="server" Text='<%# Eval("cId") %>' />
+                    <asp:textbox ID="txtcId" Visible="false" runat="server" Text='<%# Eval("cId") %>' />
                     <br />
                     <asp:image ID="imgUrlLabel" runat="server" ImageUrl='<%# Eval("imgUrl") %>' />
                     <br />Price:
@@ -30,7 +30,9 @@
                     <asp:Label ID="cModelLabel" runat="server" Text='<%# Eval("cModel") %>' />
                     <br />Description:
                     <asp:Label ID="cDesLabel" runat="server" Text='<%# Eval("cDes") %>' />
-                    <br /></td>
+                    <br />
+                    <asp:LinkButton ID="carDetail" Text="More Detail" runat="server"></asp:LinkButton>
+                </td>
             </ItemTemplate>
             <LayoutTemplate>
                 <table runat="server">

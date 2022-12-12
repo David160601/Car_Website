@@ -11,4 +11,14 @@ public partial class Home : System.Web.UI.Page
     {
 
     }
+
+
+
+    protected void ListView1_ItemCommand1(object sender, ListViewCommandEventArgs e)
+    {
+        TextBox tId = (TextBox)e.Item.FindControl("txtcId");
+
+
+        Response.Redirect("CarDetail.aspx?pid=" + tId.Text);
+    }
 }
