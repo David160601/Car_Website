@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="UserMasterPage" %>
+
+<asp:Content ContentPlaceHolderID="MasterPagePlaceholder" Runat="Server">
+    <div class="adminMasterPageContent">
+        <ul>
+            <li><a href="Home.aspx">Home</a></li>
+            <li><a>Cars</a></li>
+            <li><a>about</a></li>
+            <li><a>Login</a></li>
+        </ul>
+    </div>
+    <div class="UserMasterPageChilds">
+         <asp:ContentPlaceHolder id="UserMasterPagePlaceholder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+
+
