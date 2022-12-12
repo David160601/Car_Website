@@ -2,7 +2,6 @@
 
 <asp:Content ContentPlaceHolderID="UserMasterPagePlaceholder" Runat="Server">
     <div>
-
         <asp:ListView ID="ListView1" runat="server" >
             <ItemTemplate>
                 <span style="">Company:
