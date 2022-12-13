@@ -4,7 +4,7 @@
     <div class="adminMasterPageContent">
         <ul>
             <li><a href="Home.aspx">Home</a></li>
-            <li><a>Cars</a></li>
+            <li><a href="Cars.aspx">Cars</a></li>
             <li><a>about</a></li>
             <li><a>Login</a></li>
         </ul>

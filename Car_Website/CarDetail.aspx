@@ -10,7 +10,6 @@
                 Types:
                 <asp:Label ID="TypesLabel" runat="server" Text='<%# Eval("Types") %>' />
                 <br />
-      
                 Des:
                 <asp:Label ID="cDesLabel" runat="server" Text='<%# Eval("cDes") %>' />
                 <br />
