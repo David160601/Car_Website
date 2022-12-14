@@ -6,7 +6,7 @@
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CompanyId" DataSourceID="companyDataSource" ForeColor="#333333" GridLines="None" Width="1004px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="CompanyId" HeaderText="CompanyId" ReadOnly="True" SortExpression="CompanyId" />
                 <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
             </Columns>

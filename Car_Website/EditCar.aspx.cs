@@ -19,6 +19,7 @@ public partial class EditCar : System.Web.UI.Page
             ctype.Enabled = false;
             btnUpdate.Enabled = false;
             chkAgree.Enabled = false;
+            lblMes.Visible = false;
         }
         if (chkAgree.Checked == false)
             btnUpdate.Enabled = false;
@@ -57,6 +58,7 @@ public partial class EditCar : System.Web.UI.Page
             else
                 btnUpdate.Enabled = true;
             lblMes.Text = "";
+            btnSearch.Enabled = false;
         }
         else
             lblMes.Text = "There is no the file found!!!";
@@ -92,12 +94,15 @@ public partial class EditCar : System.Web.UI.Page
         cModel.Enabled = false;
         cDes.Enabled = false;
 
+
+
         btnUpdate.Enabled = false;
         chkAgree.Checked = false;
         chkAgree.Enabled = false;
-
+        lblMes.Visible = false;
         lblMes.Text = "updated successfully !!!";
-        }
+        lblMes.Visible = true;
+    }
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         cId.Text = "";
@@ -105,6 +110,7 @@ public partial class EditCar : System.Web.UI.Page
         cModel.Text = "";
         cDes.Text = "";
         lblMes.Text = "";
+        btnSearch.Enabled = true;
         chkAgree.Checked = false;
         cId.Enabled = true;
         cPrice.Enabled = false;

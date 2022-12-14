@@ -27,7 +27,7 @@
         </div>
         <div style="display:flex;align-items:center;margin-top:16px">
             <div style="display:flex;align-items:center;margin-right:40px"><p style="margin-right:40px"> Description </p>
-                <asp:TextBox runat="server" ID="cDes"></asp:TextBox> </div>
+            <asp:TextBox runat="server" ID="cDes" TextMode="MultiLine"></asp:TextBox>
         </div>
         <div style="margin-top:16px">
             <asp:FileUpload ID="ImgUpload" runat="server" />

@@ -6,7 +6,7 @@
         <asp:GridView ID="TypeTable" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="tId" DataSourceID="carType" ForeColor="#333333" GridLines="None" Width="992px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="tId" HeaderText="tId" ReadOnly="True" SortExpression="tId" />
                 <asp:BoundField DataField="Types" HeaderText="Types" SortExpression="Types" />
             </Columns>
