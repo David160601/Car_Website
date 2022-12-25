@@ -11,7 +11,6 @@ public partial class EditCar : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-  
             cPrice.Enabled = false;
             cModel.Enabled = false;
             cDes.Enabled = false;
