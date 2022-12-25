@@ -38,7 +38,7 @@
                     <br />
                     Types:
                     <asp:Label ID="TypesLabel" runat="server" Text='<%# Eval("Types") %>' />
-                    <asp:textbox Visible="false" ID="txtcId" runat="server" Text='<%# Eval("cId") %>' />
+                    <asp:textbox AutoPostBack="true" Visible="false" ID="txtcId" runat="server" Text='<%# Eval("cId") %>' />
                     <br />
                     Des:
                     <asp:Label ID="cDesLabel" runat="server" Text='<%# Eval("cDes") %>' />
@@ -68,6 +68,6 @@
             </LayoutTemplate>
     
         </asp:ListView>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:carDbConnectionString %>" SelectCommand="SELECT tblCompany.Company, tblType.Types, tblCar.* FROM tblCar INNER JOIN tblCompany ON tblCar.CompanyId = tblCompany.CompanyId INNER JOIN tblType ON tblCar.tId = tblType.tId"></asp:SqlDataSource>
+       
     </div>
 </asp:Content>

@@ -3,10 +3,13 @@
 <asp:Content ContentPlaceHolderID="MasterPagePlaceholder" Runat="Server">
     <div class="adminMasterPageContent">
         <ul>
-            <li><a href="Home.aspx">Home</a></li>
+            <li><a href="Default.aspx">Home</a></li>
             <li><a href="Cars.aspx">Cars</a></li>
             <li><a href="About.aspx">About</a></li>
-            <li><a>Login</a></li>
+            <li>  <asp:LoginName ID="LoginName1" runat="server" />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </li>
+          
         </ul>
     </div>
     <div class="UserMasterPageChilds">
