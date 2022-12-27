@@ -9,25 +9,28 @@ public partial class Cars : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-LBEC58U;Initial Catalog=carDb;Integrated Security=True");
-        SqlCommand cmd = new SqlCommand("SELECT tblCompany.Company, tblType.Types, tblCar.* FROM tblCar INNER JOIN tblCompany ON tblCar.CompanyId = tblCompany.CompanyId INNER JOIN tblType ON tblCar.tId = tblType.tId", cnn);
-        SqlDataReader rd;
+        if (!IsPostBack)
+        {
+            SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-LBEC58U;Initial Catalog=carDb;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("SELECT tblCompany.Company, tblType.Types, tblCar.* FROM tblCar INNER JOIN tblCompany ON tblCar.CompanyId = tblCompany.CompanyId INNER JOIN tblType ON tblCar.tId = tblType.tId where tblCar.CompanyId=1 and tblCar.tId=1", cnn);
+            SqlDataReader rd;
 
-        cnn.Open();
-     
-        rd = cmd.ExecuteReader();
-        ListView1.DataSource = rd;
-        ListView1.DataBind();
-        rd.Close();
-        cnn.Close();
+            cnn.Open();
+
+            rd = cmd.ExecuteReader();
+            ListView1.DataSource = rd;
+            ListView1.DataBind();
+            rd.Close();
+            cnn.Close();
+        }
+
     }
 
     protected void ListView1_ItemCommand1(object sender, ListViewCommandEventArgs e)
     {
         TextBox tId = (TextBox)e.Item.FindControl("txtcId");
 
-
-        Response.Redirect("CarDetail.aspx?pid=" + tId.Text);
+        Response.Redirect("cardetail.aspx?pid=" + tId.Text);
     }
     protected void CompanDropDownList_SelectedIndexChanged(object sender, EventArgs e)
     {

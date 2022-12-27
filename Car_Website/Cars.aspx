@@ -1,20 +1,43 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="Cars.aspx.cs" Inherits="Cars" %>
 
 <asp:Content ContentPlaceHolderID="UserMasterPagePlaceholder" Runat="Server">
-    <div> 
-       Compan <asp:DropDownList  AutoPostBack="true" ID="CompanDropDownList" runat="server" DataSourceID="SqlDataSource1" DataTextField="Company" DataValueField="CompanyId" OnSelectedIndexChanged="CompanDropDownList_SelectedIndexChanged">
+     <style type="text/css">
+       .image{
+           width:350px;
+           height:100%;
+           display:block;
+       }
+       .carDetail{
+           text-decoration:none;
+       }
+       .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+      margin:30px;
+      padding:30px;
+}
+
+.card:hover {
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+    </style>
+  
+   <div style="margin:10px 0px">
+         <div style="margin:10px 0px">
+       Company <asp:DropDownList  AutoPostBack="true" ID="CompanDropDownList" runat="server" DataSourceID="SqlDataSource1" DataTextField="Company" DataValueField="CompanyId" OnSelectedIndexChanged="CompanDropDownList_SelectedIndexChanged">
        <%--       <Items><asp:ListItem Text="---" Value="default" />
    </Items>--%>
               </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:carDbConnectionString %>" SelectCommand="SELECT * FROM [tblCompany]">
         </asp:SqlDataSource>
-       tpe <asp:DropDownList AutoPostBack="true" ID="tpeDropDownList" runat="server" DataSourceID="SqlDataSource2" DataTextField="Types" DataValueField="tId" OnSelectedIndexChanged="tpeDropDownList_SelectedIndexChanged"></asp:DropDownList>
+       type <asp:DropDownList AutoPostBack="true" ID="tpeDropDownList" runat="server" DataSourceID="SqlDataSource2" DataTextField="Types" DataValueField="tId" OnSelectedIndexChanged="tpeDropDownList_SelectedIndexChanged"></asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:carDbConnectionString %>" SelectCommand="SELECT * FROM [tblType]"></asp:SqlDataSource>
     </div>
-    <div>
+         
         <asp:ListView ID="ListView1" runat="server"  GroupItemCount="3" OnItemCommand="ListView1_ItemCommand1">
-
-  
             <GroupTemplate>
                 <tr id="itemPlaceholderContainer" runat="server">
                     <td id="itemPlaceholder" runat="server"></td>
@@ -22,12 +45,11 @@
             </GroupTemplate>
 
             <ItemTemplate>
-                <td runat="server" style="">
+                <td runat="server" class="card">
                  
                  
-                    <asp:image ID="imgUrlLabel" runat="server" ImageUrl='<%# Eval("imgUrl") %>' />
-                    <br />
-                    Model:
+                    <asp:image CssClass="image" ID="imgUrlLabel" runat="server" ImageUrl='<%# Eval("imgUrl") %>' />
+                     <h3 style="display:contents">Model:</h3>
                     <asp:Label ID="cModelLabel" runat="server" Text='<%# Eval("cModel") %>' />
                     <br />
                     Price:
@@ -39,11 +61,12 @@
                     Types:
                     <asp:Label ID="TypesLabel" runat="server" Text='<%# Eval("Types") %>' />
                     <asp:textbox AutoPostBack="true" Visible="false" ID="txtcId" runat="server" Text='<%# Eval("cId") %>' />
+                        
                     <br />
                     Des:
                     <asp:Label ID="cDesLabel" runat="server" Text='<%# Eval("cDes") %>' />
                     <br />
-                    <asp:LinkButton ID="carDetail" Text="More Detail" runat="server"></asp:LinkButton>
+                    <asp:LinkButton ID="carDetail" Text="More Detail" CssClass="carDetail" runat="server"></asp:LinkButton>
                 
              
          

@@ -7,13 +7,29 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
 </head>
+   
 <body>
+    <style>
+        *{
+             font-family: 'Lato', sans-serif;
+        }
+    </style>
     <form id="form1" runat="server">
+     <div class="hero">
+         <asp:image ImageAlign="Middle"  ID="ImgUrlLabel" runat="server" ImageUrl="~/Images/banner.jpg"  Width="100%" Height="700px" />
+    </div>
     <div>
         <asp:ContentPlaceHolder id="MasterPagePlaceholder" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+        <div>
+            <h5 style="text-align:center;padding:20px;color:white;background:blue">Car Shop 2022</h5>
+        </div>
     </form>
 </body>
 </html>

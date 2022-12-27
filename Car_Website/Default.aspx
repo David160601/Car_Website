@@ -1,7 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Home" %>
 
 <asp:Content ContentPlaceHolderID="UserMasterPagePlaceholder" Runat="Server">
-    <div>
+     <style type="text/css">
+       .image{
+             width:350px;
+           height:100%;
+           display:block;
+       }
+       .detailButton {
+             text-decoration:none;
+         }
+              .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+      margin:30px;
+      padding:30px;
+}
+
+.card:hover {
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+    </style>
+    <div class="carList">
         <asp:ListView ID="ListView1" runat="server" DataKeyNames="cId" DataSourceID="SqlDataSource1" GroupItemCount="3" OnItemCommand="ListView1_ItemCommand1">
             <EmptyDataTemplate>
                 <table runat="server" style="">
@@ -18,20 +40,19 @@
                     <td id="itemPlaceholder" runat="server"></td>
                 </tr>
             </GroupTemplate>
-
             <ItemTemplate>
-                <td runat="server" style="">
+                <td runat="server" class="card">
                     <asp:textbox ID="txtcId" Visible="false" runat="server" Text='<%# Eval("cId") %>' />
                     <br />
-                    <asp:image ID="imgUrlLabel" runat="server" ImageUrl='<%# Eval("imgUrl") %>' />
+                    <asp:image CssClass="image" ID="imgUrlLabel" runat="server" ImageUrl='<%# Eval("imgUrl") %>' />
+                    <h3 style="display:contents">Model:</h3>
+                    <asp:Label ID="cModelLabel" runat="server" Text='<%# Eval("cModel") %>' />
                     <br />Price:
                     <asp:Label ID="cPriceLabel" runat="server" Text='<%# Eval("cPrice") %>' />
-                    <br />Model:
-                    <asp:Label ID="cModelLabel" runat="server" Text='<%# Eval("cModel") %>' />
                     <br />Description:
                     <asp:Label ID="cDesLabel" runat="server" Text='<%# Eval("cDes") %>' />
                     <br />
-                    <asp:LinkButton ID="carDetail" Text="More Detail" runat="server"></asp:LinkButton>
+                    <asp:LinkButton CssClass="detailButton" ID="carDetail" Text="More Detail" runat="server"></asp:LinkButton>
                 </td>
             </ItemTemplate>
             <LayoutTemplate>
@@ -46,7 +67,7 @@
                     </tr>
                     <tr runat="server">
                         <td runat="server" style="">
-                            <asp:DataPager ID="DataPager1" runat="server" PageSize="9">
+                            <asp:DataPager ID="DataPager1" runat="server" PageSize="6">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
                                     <asp:NumericPagerField />

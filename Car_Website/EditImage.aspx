@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminMasterPagePlaceholder" Runat="Server">
     <div>
-            <h2>Search For The Watch By ID To Edit The Watch Image </h2>
+            <h2>Search For The Car By ID To Edit The Car Image </h2>
         <table style="width:90%">
         <tr>
             <td colspan="3" style="text-align:center">
@@ -10,7 +10,7 @@
                     Font-Italic="True" BackColor="#FFFFCC"></asp:Label></td>
         </tr>
         <tr style="vertical-align:top">
-            <td style="width:20%; padding:15px; vertical-align:top;">Watch ID</td>
+            <td style="width:20%; padding:15px; vertical-align:top;">Car ID</td>
             <td style="width:25%; vertical-align:top;"> 
                 <asp:TextBox runat="server" ID="cId" Width="180"></asp:TextBox>
                 <br /><br />

@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.master" AutoEventWireup="true" CodeFile="SignUp.aspx.cs" Inherits="SignUp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="UserMasterPagePlaceholder" Runat="Server">
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em">
+    <div style="margin:10px 0">
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Height="217px" Width="358px">
         <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
         <CreateUserButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
         <TitleTextStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -17,5 +18,7 @@
         <SideBarStyle BackColor="#507CD1" Font-Size="0.9em" VerticalAlign="Top" />
         <StepStyle Font-Size="0.8em" />
     </asp:CreateUserWizard>
+    </div>
+
 </asp:Content>
 

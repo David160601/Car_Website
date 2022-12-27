@@ -1,12 +1,46 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="UserMasterPage" %>
 
 <asp:Content ContentPlaceHolderID="MasterPagePlaceholder" Runat="Server">
+      <style type="text/css">
+       .navbar{
+           display:flex;
+           justify-content:space-between;
+           list-style:none;
+          padding:20px 5px;
+          width:80%;
+          margin:auto;
+
+       
+       }
+       .adminMasterPageContent{
+          background:blue;
+       
+       }
+     
+       .navbar li a {
+           font-size:18px;
+          text-decoration:none;
+          font-weight:bold;
+          color:white;
+          }
+          .UserMasterPageChilds {
+              width:80%;
+              margin:auto;
+          }
+          .name {
+              color:white;
+          }
+             *{
+           margin:0;
+           padding:0;
+       }
+    </style>
     <div class="adminMasterPageContent">
-        <ul>
+        <ul class="navbar">
             <li><a href="Default.aspx">Home</a></li>
             <li><a href="Cars.aspx">Cars</a></li>
             <li><a href="About.aspx">About</a></li>
-            <li>  <asp:LoginName ID="LoginName1" runat="server" />
+            <li> <asp:LoginName ID="LoginName1" CssClass="name" runat="server" />
                 <asp:LoginStatus ID="LoginStatus1" runat="server" />
             </li>
           
